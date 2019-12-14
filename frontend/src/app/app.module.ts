@@ -11,7 +11,7 @@ import { APP_BASE_HREF } from '@angular/common';
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: '/nanoha'
+      useValue: (window as any).__baseHref || '/'
     }
   ],
   bootstrap: [AppComponent]
